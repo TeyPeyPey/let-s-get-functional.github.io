@@ -21,8 +21,22 @@ var _ = require('underbar');
  *    IMPORTANT: Make sure you replace <YOUR_GITHUB_FOLDER with your actual github folder name that is in your workspace.
  */ 
 
+/*
+I:takes in an array
+O:returns the number of male customers
+C:
+E:
+*/
 var maleCount = function(array) {
-
+    var males = [];
+    for (let i = 0; i < array.length; i++){
+        //array[i] => current customer
+        //determine if current customer is male
+        if (array[i].gender === 'male'){
+            males.push(array[i]);
+        }
+    }
+    return males.length;
 };
 
 var femaleCount;
